@@ -30,11 +30,8 @@ app.use("/api/v1/user", userRoutes)
 app.use("/api/v1/deepseekai", promptRoutes)
 
 app.get("/", (req, res) => {
-    return res.send("hi from backend")
+    res.send("hi from backend")
 })
-
-console.log(process.env.frontend_URL)
-
 app.listen(port, () => {
     console.log(`app listening on port ${port}`)
 })
