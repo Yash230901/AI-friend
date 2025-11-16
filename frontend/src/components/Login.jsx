@@ -4,7 +4,7 @@ import { Eye } from "lucide-react"
 import axios from "axios"
 import { useAuth } from '../context/AuthProvider'
 const Login = () => {
-    // console.log(import.meta.env.VITE_BACKEND_URL)
+    console.log(import.meta.env.VITE_BACKEND_URL)
     const [formData, setFormData] = useState({
         email: "",
         password: ""
