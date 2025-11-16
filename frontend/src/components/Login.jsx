@@ -4,6 +4,7 @@ import { Eye } from "lucide-react"
 import axios from "axios"
 import { useAuth } from '../context/AuthProvider'
 const Login = () => {
+    // console.log(import.meta.env.VITE_BACKEND_URL)
     const [formData, setFormData] = useState({
         email: "",
         password: ""
@@ -17,7 +18,7 @@ const Login = () => {
         setLoading(true)
         setError("")
         try {
-            const { data } = await axios.post("http://localhost:4002/api/v1/user/login", {
+            const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/login`, {
                 email: formData.email,
                 password: formData.password
             }, {

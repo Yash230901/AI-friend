@@ -14,7 +14,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4002/api/v1/user/logout", {
+      const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/logout`, {
         withCredentials: true
       })
       alert(data.message || "user logout successfully!")

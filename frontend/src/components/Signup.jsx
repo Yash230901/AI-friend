@@ -17,7 +17,7 @@ const Signup = () => {
         setLoading(true)
         setError("")
         try {
-            const { data } = await axios.post("http://localhost:4002/api/v1/user/signup", {
+            const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/signup`, {
                 firstName: formData.firstName,
                 lastName: formData.lastName,
                 email: formData.email,

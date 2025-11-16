@@ -47,7 +47,7 @@ const Prompt = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const { data } = await axios.post("http://localhost:4002/api/v1/deepseekai/prompt",
+      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/deepseekai/prompt`,
         { content: trimmed }, {
         headers: {
           Authorization: `Bearer ${token}`
